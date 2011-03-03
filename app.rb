@@ -2,6 +2,7 @@
 
 require "sinatra"
 require "compass"
+require "twitter"
 
 get "/" do
   haml :index

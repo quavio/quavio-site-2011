@@ -7,6 +7,11 @@
 +font-face("PTSansBold", font-files("/webfont/ptsans-bold-webfont.woff", woff))
 +font-face("PTSansItalic", font-files("/webfont/ptsans-italic-webfont.woff", woff))
 
+$font: 14px
+
+html, body
+  :font-family PTSansRegular, Tahoma
+
 h1
   :margin 8px 0 0 0
   :color transparent
@@ -18,10 +23,9 @@ h1
   :float left
 
 h2
-  :font-family Tahoma, Geneva, sans-serif
   :font-style bold
   :color white
-  :font-size 50px
+  :font-size $font * 4
   :text-align center
 
 h3
@@ -29,7 +33,6 @@ h3
   +text-shadow(black)
   :font
     :size 36px
-    :family Tahoma, Geneva, sans-serif
 
 h4
   :color black
@@ -37,6 +40,7 @@ h4
     :size 20px
 
 strong
+  :font-family PTSansBold, Tahoma
   :font-weight bold
 
 .wrapper
@@ -48,7 +52,7 @@ strong
   :height 71px
   :position fixed
   :width 100%
-  :margin-top 30px
+  :margin-top 35px
   :z-index 2
   :top 0
   ul
@@ -63,28 +67,20 @@ strong
       :font-size 18px
       :padding 0 10px
 
-#wrapper
-  :padding 91px 0 0 0
-  div
-    :width 100%
-    :float left
-
-#mail_top
+#header
+  :background url("/images/bkg_header.png")
+  :padding 10px 0 60px 0
   :color white
-  :top 0
-  :text-align right
-  :line-height 32px
-  
-#banner
-  p
+  a
     :color white
-    :display block
-    :width 565px
-    :margin 0 auto
-    :font-size 30px
+  p
+    :font-size $font * 2
     :text-align center
+    :padding 0 180px
   h2
-    :margin 130px 0 0 0
+    :margin 130px 0 10px 0
+  .contato
+    :text-align right
 
 #info
   :width 100%

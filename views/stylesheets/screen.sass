@@ -11,6 +11,7 @@ $font: 14px
 
 html, body
   :font-family PTSansRegular, Tahoma
+  :background #d8ddd3
 
 h1
   :margin 8px 0 0 0
@@ -32,14 +33,16 @@ h2
 h3
   :color white
   +text-shadow(black)
+  :margin 0 0 60px 0
   :font
     :size 36px
     :family PTSansBold
 
 h4
-  :color black
+  :color #333
   :font
     :size 20px
+  :font-family PTSansBold
 
 strong
   :font-family PTSansBold, Tahoma
@@ -105,6 +108,21 @@ strong
   :float left
   :width 100%
 
+#equipe
+  :height 400px
+  :padding 0 0 70px 0
+  ul
+    :width 100%
+    li
+      :float left
+      :width 290px
+      :margin 0 20px
+      :background url('/images/bkg_equipe.jpg') no-repeat top center
+      :height 153px
+
+    li:first-child, li:last-child,li:nth-child(4)
+      :margin 0 !important
+
 #bottom
   :background black url('/images/bkg_rodape.png') repeat-x
   :height 383px
@@ -146,6 +164,7 @@ strong
         :color white
         :font-size $font*2+8
         :text-decoration none
+        :font-family PTSansBold
       .github,.facebook
         :width 32px
         :height 32px

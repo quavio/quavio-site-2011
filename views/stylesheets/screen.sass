@@ -8,6 +8,7 @@
 +font-face("PTSansItalic", font-files("/webfont/ptsans-italic-webfont.woff", woff))
 
 $font: 14px
+$green: #719503
 
 html, body
   :font-family PTSansRegular, Tahoma
@@ -32,13 +33,17 @@ h2
 h3
   :color white
   +text-shadow(black)
-  :font
-    :size 36px
+  :font-family PTSansBold, Tahoma
+  :font-weight bold
+  :font-size $font * 2.5
 
 h4
   :color black
   :font
     :size 20px
+
+p
+  :padding 10px 0
 
 strong
   :font-family PTSansBold, Tahoma
@@ -73,6 +78,7 @@ strong
   :background url("/images/bkg_header.png")
   :padding 10px 0 60px 0
   :color white
+  :border-bottom 1px solid darken(#00628A, 10%)
   p
     :font-size $font * 2
     :text-align center
@@ -87,17 +93,38 @@ strong
     :text-align right
 
 #info
+  :background lightgray
+  :border-top 1px solid lighten(gray, 40%)
+  :padding 40px 0
   :width 100%
-  :margin-top 120px
   :float left
+  :color darken(gray, 20%)
   #servicos
     :float left
     :width 600px
-    p
-      :font-size 24px
+    :font-size $font * 1.5
+    +text-shadow(white, 1px, 1px, 1px)
+    li
+      :list-style disc
+      :margin 10px 0 0 20px
   #contato
-    :width 330px
     :float right
+    form
+      :background url("/images/bkg_contato.png")
+      :padding 20px
+      :width 262px
+      :height 277px
+      +border-radius(10px)
+      input[type="text"], textarea
+        :width 100%
+        :padding 5px
+        :border 1px solid darken(#00628A, 10%)
+        +border-radius(5px)
+      textarea
+        :height 100px
+        :margin-top 20px
+      input[type="submit"]
+        :float right
 
 #projetos
   :margin 180px 0 0 0

@@ -1,6 +1,6 @@
-%div#info
+#info
   .wrapper
-    %div#servicos
+    #servicos
       %h3 SERVIÇOS
       %p Our process is to design the user interface first, then implement user stories. We work in weekly iterations and deploy to production often. 
       %ul
@@ -9,9 +9,9 @@
         %li Análise e desenvolvimento de sistemas coorporativos
         %li Outsourcing de projetos
               
-    %div#contato
-      %h3 CONTATO
-      %form{:method => "post"} 
+    #contato
+      %form{:method => "post"}     
+        %h3 CONTATO
         %fieldset
           %input{:type => "text", :name => "nome"}
           %input{:type => "text", :name => "email"}

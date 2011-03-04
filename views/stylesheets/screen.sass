@@ -48,25 +48,26 @@ strong
   :width 960px
   :margin 0 auto
 
-.nav
-  :background url("/images/menu_topo.png")
-  :height 71px
+#menu
+  :background black
   :position fixed
   :width 100%
-  :margin-top 35px
   :z-index 2
-  :top 0
+  :top 35px
+  :border-top lighten(black, 20%) 1px solid
+  +box-shadow(black, 0, 5px, 5px)
   ul
     :float right
-    :display block
     :margin-top 20px
     li
+      :color lightgray
       :cursor pointer
-      :color white
       :display inline
       :font-family PTSansBold
-      :font-size 18px
-      :padding 0 10px
+      :font-size $font * 1.2
+      :margin 0 0 0 20px
+      &:hover
+        :color white
 
 #header
   :background url("/images/bkg_header.png")

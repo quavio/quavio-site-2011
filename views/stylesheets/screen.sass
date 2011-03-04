@@ -23,7 +23,8 @@ h1
   :float left
 
 h2
-  :font-style bold
+  :font-family PTSansBold, Tahoma
+  :font-weight bold
   :color white
   :font-size $font * 4
   :text-align center
@@ -71,15 +72,17 @@ strong
   :background url("/images/bkg_header.png")
   :padding 10px 0 60px 0
   :color white
-  a
-    :color white
   p
     :font-size $font * 2
     :text-align center
     :padding 0 180px
+    +text-shadow(black, 3px, 3px, 2px)
   h2
     :margin 130px 0 10px 0
-  .contato
+    +text-shadow(black, 3px, 3px, 2px)
+  .contato, a
+    :font-size $font
+    :color lightgray
     :text-align right
 
 #info

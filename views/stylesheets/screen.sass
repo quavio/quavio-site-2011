@@ -37,7 +37,7 @@ h3
   :font-family PTSansBold, Tahoma
   :font-weight bold
   :font-size $font * 2.5
-  :margin 0 0 60px 0
+  :margin 0 0 40px 0
 
 h4
   :color #333
@@ -146,7 +146,21 @@ strong
       :margin 0 20px
       :background url('/images/bkg_equipe.jpg') no-repeat top center
       :height 153px
-
+      :padding 27px 0 0 0
+      img
+        :width 100px
+        :height 100px
+        :float left
+        :margin 0 10px 27px
+      p
+        :font-size 13px
+      a
+        :color #333
+        :text-decoration none
+        &:hover
+          :text-decoration underline
+      h4
+        :margin-top 4px
     li:first-child, li:last-child,li:nth-child(4)
       :margin 0 !important
 
@@ -201,3 +215,5 @@ strong
       .github
         :background url('/images/twitter.png') no-repeat top center
         :margin 0 10px 0 0
+      a:hover
+        :opacity 0.7

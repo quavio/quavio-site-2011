@@ -12,6 +12,7 @@ $green: #719503
 
 html, body
   :font-family PTSansRegular, Tahoma
+  :background #d8ddd3
 
 h1
   :margin 8px 0 0 0
@@ -36,11 +37,13 @@ h3
   :font-family PTSansBold, Tahoma
   :font-weight bold
   :font-size $font * 2.5
+  :margin 0 0 60px 0
 
 h4
-  :color black
+  :color #333
   :font
     :size 20px
+  :font-family PTSansBold
 
 p
   :padding 10px 0
@@ -95,6 +98,7 @@ strong
 #info
   :background lightgray
   :border-top 1px solid lighten(gray, 40%)
+  :border-bottom 1px solid gray
   :padding 40px 0
   :width 100%
   :float left
@@ -130,3 +134,70 @@ strong
   :margin 180px 0 0 0
   :float left
   :width 100%
+
+#equipe
+  :height 400px
+  :padding 0 0 70px 0
+  ul
+    :width 100%
+    li
+      :float left
+      :width 290px
+      :margin 0 20px
+      :background url('/images/bkg_equipe.jpg') no-repeat top center
+      :height 153px
+
+    li:first-child, li:last-child,li:nth-child(4)
+      :margin 0 !important
+
+#bottom
+  :background black url('/images/bkg_rodape.png') repeat-x
+  :height 383px
+  :padding 17px 0 0 0
+  .wrapper
+    div
+      :float left
+    #map
+      :width 408px
+      iframe
+        :border 10px solid #333
+        +border-radius(9px)
+        :margin 26px 0 0 0
+    #localizacao
+      :width 220px
+      :padding 137px 18px 0
+      span
+        :font-size $font*2+1
+        :color white
+        :width 100%
+        :float left
+      address
+        :color #ccc
+        :font-size $font+11
+        :margin 10px 0
+      a
+        :background url('/images/btn_fale_conosco.png') no-repeat top center
+        :float left
+        :width 207px
+        :height 52px
+      a:hover
+        :background url('/images/btn_fale_conosco.png') no-repeat bottom center
+      a:active
+        :height 54px
+    #sociais
+      :width 296px
+      a
+        :float left
+        :color white
+        :font-size $font*2+8
+        :text-decoration none
+        :font-family PTSansBold
+      .github,.facebook
+        :width 32px
+        :height 32px
+        :float right
+      .facebook
+        :background url('/images/facebook.png') no-repeat top center
+      .github
+        :background url('/images/twitter.png') no-repeat top center
+        :margin 0 10px 0 0

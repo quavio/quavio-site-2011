@@ -132,11 +132,32 @@ strong
 
 #projetos
   :margin 180px 0 0 0
-  :float left
   :width 100%
 
+#clientes
+  :width 100%
+  :height 100px
+  ul
+    :width 100%
+    :float right
+    li
+      :width 100px
+      :height 59px
+      :float left
+      :color transparent
+      :margin 10px 30px 30px
+    #imdepa
+      :background url('/images/clientes/imdepa.png') no-repeat
+    #galeazi
+      :background url('/images/clientes/galeazi.png') no-repeat
+    #dbserver
+      :background url('/images/clientes/db.png') no-repeat
+    #tubozan
+      :background url('/images/clientes/tubozan.png') no-repeat
+      
+
 #equipe
-  :height 400px
+  :height 450px
   :padding 0 0 70px 0
   ul
     :width 100%
@@ -161,8 +182,11 @@ strong
           :text-decoration underline
       h4
         :margin-top 4px
-    li:first-child, li:last-child,li:nth-child(4)
-      :margin 0 !important
+    li:nth-child(4), li:first-child
+      :margin-left 0 !important
+    li:nth-child(3), li:first-child
+      :margin-right 0 !important
+
 
 #bottom
   :background black url('/images/bkg_rodape.png') repeat-x

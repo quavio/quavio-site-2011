@@ -14,7 +14,7 @@ end
 
 post "/" do
   if(params[:nome] != "Nome" && params[:email] != "E-mail" && params[:mensagem] != "Mensagem")
-    Pony.mail(:to => 'nicolas@quavio.com.br', :via => :smtp, :html_body => haml(:email), :via_options => {
+    Pony.mail(:to => 'tomas@quavio.com.br', :via => :smtp, :subject => "Contato via site", :html_body => haml(:email), :via_options => {
       :address              => 'smtp.gmail.com',
       :port                 => '587',
       :enable_starttls_auto => true,
@@ -28,6 +28,13 @@ post "/" do
     flash[:alert] = "Ooops.. Por favor, preencha todos os campos, obrigado!"
   end
   redirect "/#servicos_contato"
+end
+
+get "/email" do
+  params[:nome] = "Nícolas"
+  params[:email] = "nicolas@quavio.com.br"
+  params[:mensagem] = "Teste de e-mail 1, 2, 3..."
+  haml :email
 end
 
 get '/stylesheets/:name.css' do

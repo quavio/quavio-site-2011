@@ -56,6 +56,14 @@ strong
   :width 960px
   :margin 0 auto
 
+p.notice
+  :color green
+  :font-size $font
+
+p.alert
+  :color red
+  :font-size $font
+
 #menu
   :background url("/images/bkg_menu.png")
   :position fixed
@@ -115,6 +123,9 @@ strong
       :margin 10px 0 0 20px
   #contato
     :float right
+    :width 302px
+    p.notice, p.alert
+      :text-align center
     h3
       :margin-bottom 10px
     form

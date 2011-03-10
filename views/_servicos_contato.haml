@@ -18,6 +18,10 @@
         %fieldset  
           %textarea{:name => "mensagem"}
           %input{:type => "submit", :value => "ENVIAR"}
+      - if flash[:notice]
+        %p.notice= flash[:notice]
+      - if flash[:alert]      
+        %p.alert= flash[:alert]
     /
       .contato
       %a{:href => "mailto:contato@quavio.com.br"} contato@quavio.com.br

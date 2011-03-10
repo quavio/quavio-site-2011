@@ -1,6 +1,7 @@
 GEM
   remote: http://rubygems.org/
   specs:
+    activesupport (3.0.5)
     addressable (2.2.4)
     compass (0.10.6)
       haml (>= 3.0.4)
@@ -8,7 +9,7 @@ GEM
     faraday (0.5.6)
       addressable (~> 2.2.4)
       multipart-post (~> 1.1.0)
-      rack (>= 1.1.0, < 2)
+      rack (< 2, >= 1.1.0)
     faraday_middleware (0.3.2)
       faraday (~> 0.5.4)
     haml (3.0.25)
@@ -16,16 +17,27 @@ GEM
     heroku (1.17.14)
       json (~> 1.4.6)
       launchy (~> 0.3.2)
-      rest-client (>= 1.4.0, < 1.7.0)
+      rest-client (< 1.7.0, >= 1.4.0)
+    i18n (0.5.0)
     json (1.4.6)
     launchy (0.3.7)
       configuration (>= 0.0.5)
       rake (>= 0.8.1)
+    mail (2.2.15)
+      activesupport (>= 2.3.6)
+      i18n (>= 0.4.0)
+      mime-types (~> 1.16)
+      treetop (~> 1.4.8)
     mime-types (1.16)
     multi_json (0.0.5)
     multi_xml (0.2.1)
     multipart-post (1.1.0)
+    polyglot (0.3.1)
+    pony (1.1)
+      mail (> 2.0)
     rack (1.2.1)
+    rack-flash (0.1.1)
+      rack
     rake (0.8.7)
     rest-client (1.6.1)
       mime-types (>= 1.16)
@@ -36,6 +48,8 @@ GEM
       rack (~> 1.1)
       tilt (~> 1.2)
     tilt (1.2.2)
+    treetop (1.4.9)
+      polyglot (>= 0.3.1)
     twitter (1.1.2)
       faraday (~> 0.5.4)
       faraday_middleware (~> 0.3.1)
@@ -51,6 +65,8 @@ DEPENDENCIES
   compass
   haml
   heroku
+  pony
+  rack-flash
   shotgun
   sinatra
   twitter

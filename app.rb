@@ -14,7 +14,7 @@ end
 
 post "/" do
   if(params[:nome] != "Nome" && params[:email] != "E-mail" && params[:mensagem] != "Mensagem")
-    Pony.mail(:to => 'nicolas@quavio.com.br', :via => :smtp, :via_options => {
+    Pony.mail(:to => 'nicolas@quavio.com.br', :via => :smtp, :html_body => haml(:email), :via_options => {
       :address              => 'smtp.gmail.com',
       :port                 => '587',
       :enable_starttls_auto => true,

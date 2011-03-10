@@ -5,7 +5,9 @@ require "compass"
 require "twitter"
 
 get "/" do
-  haml :index
+  @tweets = Twitter.user_timeline("quavio")[0..5]
+  puts @tweets[0].inspect
+    haml :index
 end
 
 get '/stylesheets/:name.css' do

@@ -1,4 +1,4 @@
-#info
+#servicos_contato
   .wrapper
     #servicos
       %h3 SERVIÇOS
@@ -16,9 +16,14 @@
           %input{:type => "text", :name => "nome"}
           %input{:type => "text", :name => "email"}
         %fieldset  
-          %textarea{:name => "nome"}
+          %textarea{:name => "mensagem"}
           %input{:type => "submit", :value => "ENVIAR"}
     /
       .contato
       %a{:href => "mailto:contato@quavio.com.br"} contato@quavio.com.br
       | +55 51 3062.7916
+
+%script
+  $("input[name=nome]").placeHolder({"text": "Nome"});
+  $("input[name=email]").placeHolder({"text": "E-mail"}); 
+  $("textarea[name=mensagem]").placeHolder({"text": "Mensagem"}); 

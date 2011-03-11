@@ -9,9 +9,7 @@ enable :sessions
 use Rack::Flash
 
 get "/" do
-  @tweets = Twitter.user_timeline("quavio")[0..5]
-  puts @tweets[0].inspect
-    haml :index
+  haml :index
 end
 
 post "/" do

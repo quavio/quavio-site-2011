@@ -3,27 +3,8 @@
     %h3
       %a{:href => "#projetos"} PROJETOS
     %ul
-      %li
-        %img{:src => "/images/projetos/reservai.jpg"}
-        %h4 RESERVA.AI
-        %p Lorem ipsum dolor sit amer, consectur adipiscing, sed diam nonummy nibh eusimod
-      %li.middle
-        %img{:src => "/images/projetos/metastase.jpg"}
-        %h4 METASTASE.ME
-        %p Lorem ipsum dolor sit amer, consectur adipiscing, sed diam nonummy nibh eusimod
-      %li
-        %img{:src => "/images/projetos/imdepa.jpg"}
-        %h4 IMDEPA.COM.BR
-        %p Lorem ipsum dolor sit amer, consectur adipiscing, sed diam nonummy nibh eusimod  
-      %li
-        %img{:src => "/images/projetos/reservai.jpg"}
-        %h4 RESERVA.AI
-        %p Lorem ipsum dolor sit amer, consectur adipiscing, sed diam nonummy nibh eusimod
-      %li.middle
-        %img{:src => "/images/projetos/metastase.jpg"}
-        %h4 METASTASE.ME
-        %p Lorem ipsum dolor sit amer, consectur adipiscing, sed diam nonummy nibh eusimod
-      %li
-        %img{:src => "/images/projetos/imdepa.jpg"}
-        %h4 IMDEPA.COM.BR
-        %p Lorem ipsum dolor sit amer, consectur adipiscing, sed diam nonummy nibh eusimod  
+      - Project.all.each do |project|
+        %li
+          %img{:src => "/images/projetos/#{project.image}"}
+          %h4= project.name
+          %p= project.description

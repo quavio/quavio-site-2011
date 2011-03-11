@@ -3,32 +3,10 @@
     %h3
       %a{:href => "#equipe"} EQUIPE
     %ul
-      %li 
-        %img{:src => "/images/avatar/tomas.png"}
-        %h4 Tomas de Lara
-        %p Lorem ipsum dolor sit amer, consectur adipiscing, sed diam nonummy nibh eusimod
-        %a.facebook{:href => "http://facebook.com/Tomasdelara"} Facebook
-        %a.twitter{:href => "http://twitter.com/tomasdelara"} Twitter
-      %li.middle
-        %img{:src => "/images/avatar/nicolas.png"}
-        %h4 Nícolas Iensen
-        %p Lorem ipsum dolor sit amer, consectur adipiscing, sed diam nonummy nibh eusimod
-        %a.github{:href => "http://github.com/nicolasiensen"} Github
-        %a.twitter{:href => "http://twitter.com/nicolasiensen"} Twitter
-      %li 
-        %img{:src => "/images/avatar/barbara.png"}
-        %h4 Bárbara Wolff Dick
-        %p Lorem ipsum dolor sit amer, consectur adipiscing, sed diam nonummy nibh eusimod
-        %a.facebook{:href => "http://facebook.com/barbara.dick"} Facebook
-        %a.github{:href => "http://twitter.com/"} Github
-      %li 
-        %img{:src => "/images/avatar/mortaro.png"}
-        %h4 Christian Mortaro
-        %p Lorem ipsum dolor sit amer, consectur adipiscing, sed diam nonummy nibh eusimod
-        %a.github{:href => "https://github.com/Mortaro"} Github
-        %a.rubygems{:href => "https://rubygems.org/profiles/49107"} RubyGems
-      %li.middle
-        %img{:src => "/images/avatar/angelo.png"}
-        %h4 Ângelo Fumagalli
-        %p Lorem ipsum dolor sit amer, consectur adipiscing, sed diam nonummy nibh eusimod
-        %a.facebook{:href => "http://facebook.com/fumagalli.angelo"} Facebook
+      - Team.all.each do |member|
+        %li 
+          %img{:src => "/images/avatar/#{member.avatar}"}
+          %h4= member.name
+          %p= member.about
+          - SocialLink.find_all_by_owner(member).each do |link|
+            %a{:href => link.url, :class => link.name.downcase}= link.name

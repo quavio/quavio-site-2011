@@ -8,12 +8,14 @@
 +font-face("PTSansItalic", font-files("/webfont/ptsans-italic-webfont.woff", woff))
 
 $font: 14px
-$green: #719503
+$servicos_bkg_color: #ccc
+$projetos_bkg_color: #d8ddd3
+$clientes_bkg_color: #d8ddd3
+$equipe_bkg_color: #d8ddd3
 $section_padding: 60px 0 60px 0
 
 html, body
   :font-family PTSansRegular, Tahoma
-  :background #d8ddd3
 
 h1
   :margin 8px 0 0 0
@@ -113,12 +115,12 @@ p.alert
 #servicos_contato
   :float left
   :width 100%
-  :background lightgray
-  :border-top 1px solid lighten(gray, 40%)
-  :border-bottom 1px solid gray
+  :background $servicos_bkg_color
+  :border-top 1px solid lighten($servicos_bkg_color, 20%)
+  :border-bottom 1px solid darken($servicos_bkg_color, 20%)
   :padding $section_padding
   :width 100%
-  :color darken(gray, 20%)
+  :color darken($servicos_bkg_color, 50%)
   #servicos
     :float left
     :width 600px
@@ -169,6 +171,9 @@ p.alert
   :float left
   :width 100%
   :padding $section_padding
+  :background $projetos_bkg_color
+  :border-top 1px solid lighten($projetos_bkg_color, 20%)
+  :border-bottom 1px solid darken($projetos_bkg_color, 20%)
   ul
     :width 100%
     :float left
@@ -185,6 +190,9 @@ p.alert
   :padding $section_padding
   :float left
   :width 100%
+  :background $clientes_bkg_color
+  :border-top 1px solid lighten($clientes_bkg_color, 20%)
+  :border-bottom 1px solid darken($clientes_bkg_color, 20%)
   ul
     :width 100%
     :float right
@@ -215,12 +223,33 @@ p.alert
   :float left
   :padding $section_padding
   :width 100%
+  :background $equipe_bkg_color
+  :border-top 1px solid lighten($equipe_bkg_color, 20%)
+  :border-bottom 1px solid darken($equipe_bkg_color, 20%)
+  a.twitter, a.facebook, a.github, a.rubygems
+    :display block
+    :width 16px
+    :height 0
+    :padding-top 16px
+    :overflow hidden
+    :float left
+    :margin-right 2px
+    +opacity(0.8)
+  a.twitter:hover, a.facebook:hover, a.github:hover, a.rubygems:hover
+    +opacity(1)
+  a.twitter
+    :background url('http://a1.twimg.com/a/1299797700/images/favicon.ico')
+  a.facebook
+    :background url('http://facebook.com/favicon.ico')
+  a.github
+    :background url('https://github.com/favicon.ico')
+  a.rubygems
+    :background url('http://rubygems.org/favicon.ico')
   ul
     :width 100%
     li
       :float left
       :width 290px
-      :margin 0 20px
       :background url('/images/bkg_equipe.jpg') no-repeat top center
       :height 153px
       :padding 27px 0 0 0
@@ -238,16 +267,13 @@ p.alert
           :text-decoration underline
       h4
         :margin-top 4px
-    li:nth-child(4), li:first-child
-      :margin-left 0 !important
-    li:nth-child(3), li:first-child
-      :margin-right 0 !important
-
+    li.middle
+      :margin 0 45px
 
 #bottom
   :float left
   :background black url('/images/bkg_rodape.png') repeat-x
-  :padding 17px 0 0 0
+  :padding 20px 0
   :width 100%
   .wrapper
     div

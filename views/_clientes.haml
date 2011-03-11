@@ -5,5 +5,5 @@
     %ul
       - Client.all.each do |client|
         %li
-          %img{:src => "/images/clientes/#{client.gray_logo}", :alt => client.name}
-          %img{:src => "/images/clientes/#{client.color_logo}", :alt => client.name}
+          %img{:src => "/images/clientes/#{client.name}.jpg", :alt => client.name}
+          %img{:src => "/images/clientes/#{client.name}-color.jpg"}

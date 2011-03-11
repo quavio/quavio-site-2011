@@ -105,8 +105,8 @@ The Juitter developer shall have no responsability for data loss or damage of an
         type: 'GET',
         dataType: 'jsonp',
         timeout: 1000,
-        error: function(){ $("#"+contDiv).html("fail#"); },
         success: function(json){
+          $('#quavio_twitter img').hide();
           if(e==1) $("#"+contDiv).html("");
           $.each(json.results,function(i,item) {
             if(e==1 || (i<numMSG && item.id>ultID)){

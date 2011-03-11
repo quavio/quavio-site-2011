@@ -257,19 +257,20 @@ p.alert
       iframe
         :border 10px solid #333
         +border-radius(9px)
-        :margin 26px 0 0 0
     #localizacao
       :width 220px
-      :padding 137px 18px 0
+      :padding 200px 18px 0
       span
         :font-size $font*2+1
         :color white
         :width 100%
         :float left
+        :margin-bottom 10px
       address
         :color #ccc
         :font-size $font+11
         :margin 10px 0
+        :font-size 23px
       a
         :background url('/images/btn_fale_conosco.png') no-repeat top center
         :float left
@@ -281,7 +282,7 @@ p.alert
         :height 54px
     #sociais
       :width 296px
-      a
+      a.quavio
         :float left
         :color white
         :font-size $font*2+8
@@ -296,5 +297,18 @@ p.alert
       .github
         :background url('/images/twitter.png') no-repeat top center
         :margin 0 10px 0 0
-      a:hover
+      a.quavio:hover
         :opacity 0.7
+      #quavio_twitter
+        :color white
+        a
+          :color orange
+        li
+          :background darken(gray, 40%)
+          +box-shadow(white, 0, 1px, 1px)
+          +border-radius(10px)
+          :padding 12px 5px
+          :margin 10px 0 0 0
+          :height 71px
+        p
+          :font-size 15px

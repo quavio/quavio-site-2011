@@ -1,7 +1,8 @@
 #servicos_contato
   .wrapper
     #servicos
-      %h3 SERVIÇOS
+      %h3
+        %a{:href => "#servicos_contato"} SERVIÇOS
       %p Our process is to design the user interface first, then implement user stories. We work in weekly iterations and deploy to production often. 
       %ul
         %li Design e desenvolvimento de aplicativos web
@@ -11,7 +12,8 @@
               
     #contato
       %form{:method => "post"}     
-        %h3 CONTATO
+        %h3
+          %a{:href => "#servicos_contato"} CONTATO
         %fieldset
           %input{:type => "text", :name => "nome"}
           %input{:type => "text", :name => "email"}
@@ -27,7 +29,7 @@
       %a{:href => "mailto:contato@quavio.com.br"} contato@quavio.com.br
       | +55 51 3062.7916
 
-%script
-  $("input[name=nome]").placeHolder({"text": "Nome"});
-  $("input[name=email]").placeHolder({"text": "E-mail"}); 
-  $("textarea[name=mensagem]").placeHolder({"text": "Mensagem"}); 
+  %script
+    $("input[name=nome]").placeHolder({"text": "Nome"});
+    $("input[name=email]").placeHolder({"text": "E-mail"}); 
+    $("textarea[name=mensagem]").placeHolder({"text": "Mensagem"}); 

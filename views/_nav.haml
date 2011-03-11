@@ -1,14 +1,24 @@
 #menu
   .wrapper
-    %h1 Quavio - Software na web
+    %h1
+      %a{:href => "#header"} Quavio - Software na web
     %ul
       %li
-        %a{:href =>"#servicos_contato"} SERVIÇOS
+        %a{:href => "#servicos_contato"} SERVIÇOS
       %li
-        %a{:href =>"#projetos"} PROJETOS
+        %a{:href => "#projetos"} PROJETOS
       %li
-        %a{:href =>"#clientes"} CLIENTES
+        %a{:href => "#clientes"} CLIENTES
       %li
-        %a{:href =>"#equipe"} EQUIPE
+        %a{:href => "#equipe"} EQUIPE
       %li
-        %a.last{:href =>"#bottom"} LOCALIZAÇÃO
+        %a.last{:href => "#bottom"} LOCALIZAÇÃO
+  %script
+    $(document).ready(function(){
+    $("a[href^='#']").click(function(){
+    href = $(this).attr('href')
+    pos = $(href).position()
+    $.scrollTo(pos,600)
+    return false
+    })
+    })

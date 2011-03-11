@@ -313,6 +313,8 @@ p.alert
         :height 54px
     #sociais
       :width 296px
+      a:hover
+        :opacity 0.7
       a.quavio
         :float left
         :color white
@@ -323,13 +325,12 @@ p.alert
         :width 32px
         :height 32px
         :float right
+        :color transparent
       .facebook
         :background url('/images/facebook.png') no-repeat top center
       .github
         :background url('/images/twitter.png') no-repeat top center
         :margin 0 10px 0 0
-      a.quavio:hover
-        :opacity 0.7
       #quavio_twitter
         :color white
         a
@@ -339,7 +340,7 @@ p.alert
           +box-shadow(white, 0, 1px, 1px)
           +border-radius(10px)
           :padding 12px 5px
-          :margin 10px 0 0 0
-          :height 71px
+          :margin 8px 0
+          :height 65px
         p
           :font-size 15px

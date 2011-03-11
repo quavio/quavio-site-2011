@@ -5,6 +5,6 @@
     %ul
       - Project.all.each do |project|
         %li
-          %img{:src => "/images/projetos/#{project.image}"}
+          %img{:src => "/images/projetos/#{project.name}.png"}
           %h4= project.name
           %p= project.description

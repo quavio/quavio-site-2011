@@ -48,6 +48,8 @@ GEM
       rack (~> 1.1)
       tilt (~> 1.2)
     tilt (1.2.2)
+    towsta (0.1.4)
+      json
     treetop (1.4.9)
       polyglot (>= 0.3.1)
     twitter (1.1.2)
@@ -69,4 +71,5 @@ DEPENDENCIES
   rack-flash
   shotgun
   sinatra
+  towsta
   twitter

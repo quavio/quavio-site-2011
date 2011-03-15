@@ -184,7 +184,7 @@ p.alert
     li
       :width 300px
       :float left
-      :margin 0 0 40px 0
+      :margin 0 20px 40px 0
       img
         :border 10px solid darken($projetos_bkg_color, 20%)
         :margin-bottom 10px
@@ -192,8 +192,6 @@ p.alert
         +border-radius(5px)
         &:hover
           :border 10px solid #006ca1
-    li.middle
-      :margin 0 30px 20px 30px
 
 #clientes
   :padding $section_padding
@@ -211,22 +209,15 @@ p.alert
       :float left
       :color transparent
       :margin 10px 30px 30px
-      :background-position 10px 0
-      &:hover
-        :opacity 0.7
-    #imdepa
-      :background url('/images/clientes/imdepa.png') no-repeat
-    #galeazi
-      :background url('/images/clientes/galeazi.png') no-repeat
-    #dbserver
-      :background url('/images/clientes/db.png') no-repeat
-    #tubozan
-      :background url('/images/clientes/tubozan.png') no-repeat
-    #portoalegreclinicas
-      :background url('/images/clientes/poa.jpg') no-repeat 0 0
-    #dnforum
-      :background url('/images/clientes/dn.jpg') no-repeat 0 15px
-      
+      :position relative
+      img
+        :position absolute
+        :top 0
+        :left 0
+      img:first-child
+        :z-index 2
+        &:hover
+          :opacity 0
 
 #equipe
   :float left
@@ -262,6 +253,7 @@ p.alert
       :background url('/images/bkg_equipe.jpg') no-repeat top center
       :height 153px
       :padding 27px 0 0 0
+      :margin 0 30px 0 0
       img
         :width 100px
         :height 100px
@@ -298,7 +290,7 @@ p.alert
         +border-radius(9px)
     #localizacao
       :width 220px
-      :padding 200px 18px 0
+      :padding 184px 18px 0
       span
         :font-size $font*2+1
         :color white
@@ -321,6 +313,8 @@ p.alert
         :height 54px
     #sociais
       :width 296px
+      a:hover
+        :opacity 0.7
       a.quavio
         :float left
         :color white
@@ -331,13 +325,12 @@ p.alert
         :width 32px
         :height 32px
         :float right
+        :color transparent
       .facebook
         :background url('/images/facebook.png') no-repeat top center
       .github
         :background url('/images/twitter.png') no-repeat top center
         :margin 0 10px 0 0
-      a.quavio:hover
-        :opacity 0.7
       #quavio_twitter
         :color white
         a
@@ -347,7 +340,7 @@ p.alert
           +box-shadow(white, 0, 1px, 1px)
           +border-radius(10px)
           :padding 12px 5px
-          :margin 10px 0 0 0
-          :height 71px
+          :margin 8px 0
+          :height 65px
         p
           :font-size 15px

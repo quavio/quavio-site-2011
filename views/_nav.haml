@@ -13,12 +13,3 @@
         %a{:href => "#equipe"} EQUIPE
       %li
         %a.last{:href => "#bottom"} LOCALIZAÇÃO
-  %script
-    $(document).ready(function(){
-    $("a[href^='#']").click(function(){
-    href = $(this).attr('href')
-    pos = $(href).position()
-    $.scrollTo(pos,600)
-    return false
-    })
-    })

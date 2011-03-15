@@ -3,9 +3,7 @@
     %h3
       %a{:href => "#clientes"} CLIENTES
     %ul
-      %li#dbserver DB SERVER
-      %li#imdepa IMDEPA
-      %li#tubozan TUBOZAN
-      %li#dnforum DN FORUM
-      %li#portoalegreclinicas PORTO ALEGRE CLINICAS
-      %li#galeazi GALEAZI
+      - Client.all.each do |client|
+        %li
+          %img{:src => "/images/clientes/#{client.name}.jpg", :alt => client.name}
+          %img{:src => "/images/clientes/#{client.name}-color.jpg"}

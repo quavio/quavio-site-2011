@@ -4,11 +4,14 @@ require "compass"
 require "twitter"
 require 'rack-flash'
 require 'pony'
+require 'towsta'
 
 enable :sessions
 use Rack::Flash
 
 get "/" do
+  Towsta::Synchronizer.new :secret => 'koObsBYFrN5hL0KnP1qmCsoKqaMBuvILj1nxn2I34RQ5'
+  @tweets = Twitter.user_timeline("quavio")[0..5]
   haml :index
 end
 
